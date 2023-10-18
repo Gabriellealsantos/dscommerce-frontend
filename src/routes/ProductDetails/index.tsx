@@ -2,9 +2,10 @@ import ButtonInverse from '../../components/ButtonInverse';
 import ButtonPrimary from '../../components/ButtonPrimary';
 import HeaderClient from '../../components/HeaderClient';
 import ProductDetailsCard from '../../components/ProductDetailsCard';
+import { ProductDTO } from '../../models/product';
 import './styles.css';
 
-const product: ProductDto = {
+const product: ProductDTO = {
     id: 2,
     name: "SmartTV",
     description: "Esta tv é top",
@@ -28,10 +29,10 @@ export default function ProudctDetails() {
             <HeaderClient />
             <main>
                 <section id="product-details-section" className="dsc-container">
-                    <ProductDetailsCard product={product}  />
+                    <ProductDetailsCard product={product} />
                     <div className="dsc-btn-page-container">
-                        <ButtonPrimary />
-                        <ButtonInverse />
+                        <ButtonPrimary text="Comprar" />
+                        <ButtonInverse text="Inicio" />
                     </div>
                 </section>
             </main>

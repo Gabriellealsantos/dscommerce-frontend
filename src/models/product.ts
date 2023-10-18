@@ -1,6 +1,6 @@
 import { CategoryDTO } from "./category";
 
-export type PruductDTO = {
+export type ProductDTO = {
     id: number;
     name: string;
     description: string;
