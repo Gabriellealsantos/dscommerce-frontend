@@ -1,6 +1,6 @@
 import './styles.css'
 
-export default function SeachBar() {
+export default function SearchBar() {
 
     return (
         <form className="dsc-search-bar">
