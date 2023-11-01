@@ -13,8 +13,9 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<ClientHome />}>
-          <Route index element={<Catalog />} /> 
-          <Route path="product-details" element={<ProudctDetails />} />
+          <Route index element={<Catalog />} />
+          <Route path="catalog" element={<Catalog />} />
+          <Route path="product-details/:productId" element={<ProudctDetails />} />
         </Route>
       </Routes>
     </BrowserRouter>
