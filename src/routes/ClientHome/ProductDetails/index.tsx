@@ -1,16 +1,24 @@
+import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import ButtonInverse from '../../../components/ButtonInverse';
 import ButtonPrimary from '../../../components/ButtonPrimary';
 import ProductDetailsCard from '../../../components/ProductDetailsCard';
+import { ProductDTO } from '../../../models/product';
 import * as productService from '../../../services/produc-service';
 import './styles.css';
 
 
 export default function ProudctDetails() {
 
-    const parms = useParams();
+    const params = useParams();
 
-    const product = productService.findById(Number(parms.productId))
+
+    const [product, setProduct] = useState<ProductDTO>();
+
+    useEffect(() => {
+        productService.findById(Number(params.productId))
+            .then(response => { setProduct(response.data) })
+    }, []);
 
     return (
 
